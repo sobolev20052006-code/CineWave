@@ -208,7 +208,7 @@ a {
 }
 
 .movie-card {
-  width: calc((100% - 100px) / 6); /* 6 карточек и 5 отступов по 20px */
+  width: calc((100% - 100px) / 6);
   display: flex;
   flex-direction: column;
 }
@@ -277,7 +277,7 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
-  margin-bottom: 24px; /* Отступ стал меньше, так как постер не выпирает вверх */
+  margin-bottom: 24px;
 }
 
 .releases__title {
@@ -301,8 +301,8 @@ a {
 .release-card {
   display: flex;
   align-items: center;
-  height: 68px; /* Точная высота плашки с макета */
-  padding: 6px 20px 6px 6px; /* Небольшой отступ вокруг постера внутри карточки */
+  height: 68px;
+  padding: 6px 20px 6px 6px;
   background-color: #ffffff;
   border-radius: 14px;
   text-decoration: none;
@@ -319,11 +319,10 @@ a {
 
 .release-card__poster {
   width: 48px;
-  height: 56px; /* Вписывается внутрь высоты 68px с учетом отступов */
+  height: 56px;
   object-fit: cover;
   border-radius: 10px;
   margin-right: 16px;
-  flex-shrink: 0; /* Чтобы картинка не сжималась на узких экранах */
 }
 
 .release-card__info {
@@ -346,7 +345,7 @@ a {
 }
 
 .release-card__arrow {
-  margin-left: auto; /* Прижимает стрелку к правому краю карточки */
+  margin-left: auto;
   font-size: 20px;
   color: #6c5ce7;
   transition: transform 0.2s ease;
@@ -387,9 +386,6 @@ a {
   color: #1a1d24;
 }
 
-/* ============================= */
-/* ПЕРЕКЛЮЧЕНИЕ ТЕМЫ CINewAVE */
-/* ============================= */
 
 /* Светлая тема */
 :root {
