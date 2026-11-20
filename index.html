@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CineWave</title>
+    <script>
+      try {
+        document.documentElement.dataset.theme =
+          localStorage.getItem("cinewave-theme") === "dark" ? "dark" : "light";
+      } catch {
+        document.documentElement.dataset.theme = "light";
+      }
+    </script>
+    <link rel="preconnect" href="https://googleapis.com" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body data-page="home">
+    <script>
+      document.body.dataset.theme = document.documentElement.dataset.theme;
+    </script>
+    <div class="top-wrapper">
+      <header class="header">
+        <div class="container">
+          <div class="logo">
+            <img src="images/logo.svg" alt="Logo" class="logo__img" />
+            <a href="index.html" class="logo__text">CineWave</a>
+          </div>
+
+          <nav class="header__nav">
+            <ul class="header__list">
+              <li class="header__li">
+                <a href="index.html" class="header__items active">Главная</a>
+              </li>
+              <li class="header__li">
+                <a href="catalog.html" class="header__items">Каталог</a>
+              </li>
+              <li class="header__li">
+                <a href="new.html" class="header__items">Новинки</a>
+              </li>
+              <li class="header__li">
+                <a href="mine.html" class="header__items">Мои фильмы</a>
+              </li>
+            </ul>
+          </nav>
+
+          <div class="header__actions">
+            <button
+              class="theme-toggle"
+              id="themeToggle"
+              aria-label="Переключить тему"
+            >
+              <span class="theme-toggle__icon">🌙</span>
+            </button>
+
+            <a href="search.html" class="search-link" aria-label="Поиск">
+              <img src="images/search.svg" alt="Поиск" />
+            </a>
+
+            <a href="profile.html" class="avatar-link">
+              <img src="images/Аватар.svg" alt="Профиль" />
+            </a>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <section class="hero">
+          <div class="container">
+            <div class="hero__content">
+              <h1 class="hero__title">Твой любимый <span>кинотеатр</span></h1>
+              <p class="hero__subtitle">
+                Тысячи фильмов и сериалов в отличном качестве
+              </p>
+              <a href="#" class="hero__btn">Смотреть сейчас</a>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <section class="popular">
+      <div class="container">
+        <div class="popular__header">
+          <h2 class="popular__title">Популярное</h2>
+          <a href="catalog.html" class="popular__all">Все фильмы →</a>
+        </div>
+
+        <div class="popular__cards">
+          <!-- Карточка 1 -->
+          <div class="movie-card">
+            <a href="#" class="movie-card__poster">
+              <img
+                src="images/дюна.jpeg"
+                alt="Дюна: Часть вторая"
+                class="movie-card__img"
+              />
+            </a>
+            <div class="movie-card__info">
+              <h3 class="movie-card__title">
+                <a href="#">Дюна: Часть вторая</a>
+              </h3>
+              <div class="movie-card__rating">
+                <span class="star">★</span> 8.7
+              </div>
+            </div>
+          </div>
+
+          <!-- Карточка 2 -->
+          <div class="movie-card">
+            <a href="#" class="movie-card__poster">
+              <img
+                src="images/Interstellar_2014.jpg"
+                alt="Интерстеллар"
+                class="movie-card__img"
+              />
+            </a>
+            <div class="movie-card__info">
+              <h3 class="movie-card__title">
+                <a href="#">Интерстеллар</a>
+              </h3>
+              <div class="movie-card__rating">
+                <span class="star">★</span> 8.6
+              </div>
+            </div>
+          </div>
+
+          <!-- Карточка 3 -->
+          <div class="movie-card">
+            <a href="#" class="movie-card__poster">
+              <img
+                src="images/Poster_Inception_film_2010.jpg"
+                alt="Начало"
+                class="movie-card__img"
+              />
+            </a>
+            <div class="movie-card__info">
+              <h3 class="movie-card__title">
+                <a href="#">Начало</a>
+              </h3>
+              <div class="movie-card__rating">
+                <span class="star">★</span> 8.8
+              </div>
+            </div>
+          </div>
+
+          <!-- Карточка 4 -->
+          <div class="movie-card">
+            <a href="#" class="movie-card__poster">
+              <img
+                src="images/Fight_club.jpg"
+                alt="Бойцовский клуб"
+                class="movie-card__img"
+              />
+            </a>
+            <div class="movie-card__info">
+              <h3 class="movie-card__title">
+                <a href="#">Бойцовский клуб</a>
+              </h3>
+              <div class="movie-card__rating">
+                <span class="star">★</span> 8.8
+              </div>
+            </div>
+          </div>
+
+          <!-- Карточка 5 -->
+          <div class="movie-card">
+            <a href="#" class="movie-card__poster">
+              <img
+                src="images/images.jpeg"
+                alt="Матрица"
+                class="movie-card__img"
+              />
+            </a>
+            <div class="movie-card__info">
+              <h3 class="movie-card__title">
+                <a href="#">Матрица</a>
+              </h3>
+              <div class="movie-card__rating">
+                <span class="star">★</span> 8.7
+              </div>
+            </div>
+          </div>
+
+          <!-- Карточка 6 (с подзаголовком) -->
+          <div class="movie-card">
+            <a href="#" class="movie-card__poster">
+              <img
+                src="images/Harry_Potter_and_the_Philosopher's_Stone_—_movie.jpg"
+                alt="Гарри Поттер и философский камень"
+                class="movie-card__img"
+              />
+            </a>
+            <div class="movie-card__info">
+              <h3 class="movie-card__title">
+                <a href="#">Гарри Поттер</a>
+              </h3>
+              <p class="movie-card__subtitle">и философский камень</p>
+              <div class="movie-card__rating">
+                <span class="star">★</span> 8.6
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="releases">
+      <div class="container">
+        <div class="releases__header">
+          <h2 class="releases__title">Новые релизы</h2>
+          <span class="releases__subtitle">Новое каждую неделю</span>
+        </div>
+
+        <div class="releases__list">
+          <!-- Карточка 1 -->
+          <a href="#" class="release-card">
+            <img
+              src="images/дюна.jpeg"
+              alt="Дюна: Часть вторая"
+              class="release-card__poster"
+            />
+            <div class="release-card__info">
+              <h3 class="release-card__name">Дюна: Часть вторая</h3>
+              <p class="release-card__meta">
+                Недавно в CineWave &nbsp;•&nbsp; ★ 8.7
+              </p>
+            </div>
+            <span class="release-card__arrow">→</span>
+          </a>
+
+          <!-- Карточка 2 -->
+          <a href="#" class="release-card">
+            <img
+              src="images/Poster_Inception_film_2010.jpg"
+              alt="Начало"
+              class="release-card__poster"
+            />
+            <div class="release-card__info">
+              <h3 class="release-card__name">Начало</h3>
+              <p class="release-card__meta">
+                Недавно в CineWave &nbsp;•&nbsp; ★ 8.8
+              </p>
+            </div>
+            <span class="release-card__arrow">→</span>
+          </a>
+
+          <!-- Карточка 3 -->
+          <a href="#" class="release-card">
+            <img
+              src="images/вл.jpeg"
+              alt="Властелин колец"
+              class="release-card__poster"
+            />
+            <div class="release-card__info">
+              <h3 class="release-card__name">Властелин колец</h3>
+              <p class="release-card__meta">
+                Недавно в CineWave &nbsp;•&nbsp; ★ 8.8
+              </p>
+            </div>
+            <span class="release-card__arrow">→</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container footer__container">
+        <div class="footer__group">
+          <p class="footer__text">© 2026 CineWave</p>
+          <p class="footer__text">Кино, которое остаётся с тобой</p>
+        </div>
+        <nav class="footer__group">
+          <a href="#" class="footer__link">Поддержка</a>
+          <a href="#" class="footer__link">Правила сервиса</a>
+        </nav>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>

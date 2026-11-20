@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>404 — CineWave</title>
+    <script>
+      try {
+        document.documentElement.dataset.theme =
+          localStorage.getItem("cinewave-theme") === "dark" ? "dark" : "light";
+      } catch {
+        document.documentElement.dataset.theme = "light";
+      }
+    </script>
+    <link rel="preconnect" href="https://googleapis.com" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body data-page="404">
+    <script>
+      document.body.dataset.theme = document.documentElement.dataset.theme;
+    </script>
+    <div class="top-wrapper inner-wrapper">
+      <header class="header">
+        <div class="container">
+          <div class="logo">
+            <img src="images/logo.svg" alt="Logo" class="logo__img" />
+            <a href="index.html" class="logo__text">CineWave</a>
+          </div>
+
+          <nav class="header__nav">
+            <ul class="header__list">
+              <li class="header__li">
+                <a href="index.html" class="header__items">Главная</a>
+              </li>
+              <li class="header__li">
+                <a href="catalog.html" class="header__items">Каталог</a>
+              </li>
+              <li class="header__li">
+                <a href="new.html" class="header__items">Новинки</a>
+              </li>
+              <li class="header__li">
+                <a href="mine.html" class="header__items">Мои фильмы</a>
+              </li>
+            </ul>
+          </nav>
+
+          <div class="header__actions">
+            <button
+              class="theme-toggle"
+              id="themeToggle"
+              aria-label="Переключить тему"
+            >
+              <span class="theme-toggle__icon">🌙</span>
+            </button>
+
+            <a href="search.html" class="search-link" aria-label="Поиск">
+              <img src="images/search.svg" alt="Поиск" />
+            </a>
+
+            <a href="profile.html" class="avatar-link">
+              <img src="images/Аватар.svg" alt="Профиль" />
+            </a>
+          </div>
+        </div>
+      </header>
+    </div>
+    <main class="container inner-page">
+      <div class="not-found">
+        <div class="not-found-art">▣ <span>404</span></div>
+        <div>
+          <span class="accent">ОШИБКА 404</span>
+          <h1>Страница не найдена</h1>
+          <p>
+            Возможно, страница была удалена<br />
+            или вы ввели неверный адрес.
+          </p>
+          <a class="primary" href="index.html">Вернуться на главную</a>
+        </div>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="container footer__container">
+        <div class="footer__group">
+          <p class="footer__text">© 2026 CineWave</p>
+          <p class="footer__text">Кино, которое остаётся с тобой</p>
+        </div>
+        <nav class="footer__group">
+          <a href="#" class="footer__link">Поддержка</a>
+          <a href="#" class="footer__link">Правила сервиса</a>
+        </nav>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>

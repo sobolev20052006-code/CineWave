@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 84 88" role="img" aria-label="Play logo">
+  <defs>
+    <linearGradient id="body" x2="1" y2="1">
+      <stop stop-color="#613BFA"/>
+      <stop offset="1" stop-color="#625BEF"/>
+    </linearGradient>
+    <linearGradient id="tip" x2="1" y2="0">
+      <stop stop-color="#6698DF"/>
+      <stop offset="1" stop-color="#69C3D0"/>
+    </linearGradient>
+  </defs>
+  <path fill="url(#body)" fill-rule="evenodd" d="M23 6 74 34Q91 44 74 54L23 82C12 88 4 81 4 70V18C4 7 12 0 23 6ZM28 32V56Q28 59 31 57L51 45Q53 44 51 43L31 31Q28 29 28 32Z"/>
+  <path fill="url(#tip)" d="M70 32 74 34Q91 44 74 54L68 57C60 54 54 50 54 44S61 33 70 32Z"/>
+</svg>

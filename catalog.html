@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Каталог — CineWave</title>
+    <script>
+      try {
+        document.documentElement.dataset.theme =
+          localStorage.getItem("cinewave-theme") === "dark" ? "dark" : "light";
+      } catch {
+        document.documentElement.dataset.theme = "light";
+      }
+    </script>
+    <link rel="preconnect" href="https://googleapis.com" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body data-page="catalog">
+    <script>
+      document.body.dataset.theme = document.documentElement.dataset.theme;
+    </script>
+    <div class="top-wrapper inner-wrapper">
+      <header class="header">
+        <div class="container">
+          <div class="logo">
+            <img src="images/logo.svg" alt="Logo" class="logo__img" />
+            <a href="index.html" class="logo__text">CineWave</a>
+          </div>
+
+          <nav class="header__nav">
+            <ul class="header__list">
+              <li class="header__li">
+                <a href="index.html" class="header__items">Главная</a>
+              </li>
+              <li class="header__li">
+                <a href="catalog.html" class="header__items active">Каталог</a>
+              </li>
+              <li class="header__li">
+                <a href="new.html" class="header__items">Новинки</a>
+              </li>
+              <li class="header__li">
+                <a href="mine.html" class="header__items">Мои фильмы</a>
+              </li>
+            </ul>
+          </nav>
+
+          <div class="header__actions">
+            <button
+              class="theme-toggle"
+              id="themeToggle"
+              aria-label="Переключить тему"
+            >
+              <span class="theme-toggle__icon">🌙</span>
+            </button>
+
+            <a href="search.html" class="search-link" aria-label="Поиск">
+              <img src="images/search.svg" alt="Поиск" />
+            </a>
+
+            <a href="profile.html" class="avatar-link">
+              <img src="images/Аватар.svg" alt="Профиль" />
+            </a>
+          </div>
+        </div>
+      </header>
+    </div>
+    <main class="container inner-page">
+      <div class="page-heading">
+        <h1>Каталог</h1>
+        <p>Огромная коллекция фильмов и сериалов</p>
+      </div>
+      <input
+        class="field search-field"
+        id="catalogSearch"
+        placeholder="Поиск по названию, актёру или режиссёру"
+        aria-label="Поиск в каталоге"
+      />
+      <div class="filter-row">
+        <div class="filters">
+          <button data-type="all" class="selected">Все</button
+          ><button data-type="film">Фильмы</button
+          ><button data-type="series">Сериалы</button
+          ><button data-type="cartoon">Мультфильмы</button>
+        </div>
+        <div class="filters">
+          <select id="genre">
+            <option value="">Все жанры</option>
+            <option>Фантастика</option>
+            <option>Триллер</option>
+            <option>Драма</option>
+            <option>Фэнтези</option></select
+          ><select id="year">
+            <option value="">Все годы</option>
+            <option>2024</option>
+            <option>2014</option>
+            <option>2010</option>
+            <option>2001</option>
+            <option>1999</option>
+            <option>1997</option></select
+          ><select id="sort">
+            <option value="popular">По популярности</option>
+            <option value="rating">По рейтингу</option>
+            <option value="new">Сначала новые</option>
+          </select>
+        </div>
+      </div>
+      <h2 class="section-title">Рекомендуем вам</h2>
+      <div id="catalogResults" class="catalog-grid"></div>
+    </main>
+    <footer class="footer">
+      <div class="container footer__container">
+        <div class="footer__group">
+          <p class="footer__text">© 2026 CineWave</p>
+          <p class="footer__text">Кино, которое остаётся с тобой</p>
+        </div>
+        <nav class="footer__group">
+          <a href="#" class="footer__link">Поддержка</a>
+          <a href="#" class="footer__link">Правила сервиса</a>
+        </nav>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>

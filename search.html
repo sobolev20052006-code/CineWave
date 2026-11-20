@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Поиск — CineWave</title>
+    <script>
+      try {
+        document.documentElement.dataset.theme =
+          localStorage.getItem("cinewave-theme") === "dark" ? "dark" : "light";
+      } catch {
+        document.documentElement.dataset.theme = "light";
+      }
+    </script>
+    <link rel="preconnect" href="https://googleapis.com" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body data-page="search">
+    <script>
+      document.body.dataset.theme = document.documentElement.dataset.theme;
+    </script>
+    <div class="top-wrapper inner-wrapper">
+      <header class="header">
+        <div class="container">
+          <div class="logo">
+            <img src="images/logo.svg" alt="Logo" class="logo__img" />
+            <a href="index.html" class="logo__text">CineWave</a>
+          </div>
+
+          <nav class="header__nav">
+            <ul class="header__list">
+              <li class="header__li">
+                <a href="index.html" class="header__items">Главная</a>
+              </li>
+              <li class="header__li">
+                <a href="catalog.html" class="header__items">Каталог</a>
+              </li>
+              <li class="header__li">
+                <a href="new.html" class="header__items">Новинки</a>
+              </li>
+              <li class="header__li">
+                <a href="mine.html" class="header__items">Мои фильмы</a>
+              </li>
+            </ul>
+          </nav>
+
+          <div class="header__actions">
+            <button
+              class="theme-toggle"
+              id="themeToggle"
+              aria-label="Переключить тему"
+            >
+              <span class="theme-toggle__icon">🌙</span>
+            </button>
+
+            <a href="search.html" class="search-link" aria-label="Поиск">
+              <img src="images/search.svg" alt="Поиск" />
+            </a>
+
+            <a href="profile.html" class="avatar-link">
+              <img src="images/Аватар.svg" alt="Профиль" />
+            </a>
+          </div>
+        </div>
+      </header>
+    </div>
+    <main class="container inner-page">
+      <div class="page-heading"><h1>Поиск</h1></div>
+      <input
+        class="field search-field"
+        id="searchInput"
+        placeholder="Название фильма"
+        aria-label="Название фильма"
+        value=""
+      />
+      <div class="section-row">
+        <h2>Результаты поиска</h2>
+        <small id="searchCount"></small>
+      </div>
+      <div id="searchResults" class="search-results"></div>
+      <h3 class="section-title">Популярные запросы</h3>
+      <div class="filters">
+        <a class="secondary" href="search.html?q=%D0%94%D1%8E%D0%BD%D0%B0"
+          >Дюна</a
+        ><a
+          class="secondary"
+          href="search.html?q=%D0%98%D0%BD%D1%82%D0%B5%D1%80%D1%81%D1%82%D0%B5%D0%BB%D0%BB%D0%B0%D1%80"
+          >Интерстеллар</a
+        ><a
+          class="secondary"
+          href="search.html?q=%D0%A4%D0%B0%D0%BD%D1%82%D0%B0%D1%81%D1%82%D0%B8%D0%BA%D0%B0"
+          >Фантастика</a
+        ><a
+          class="secondary"
+          href="search.html?q=%D0%93%D0%B0%D1%80%D1%80%D0%B8%20%D0%9F%D0%BE%D1%82%D1%82%D0%B5%D1%80"
+          >Гарри Поттер</a
+        >
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="container footer__container">
+        <div class="footer__group">
+          <p class="footer__text">© 2026 CineWave</p>
+          <p class="footer__text">Кино, которое остаётся с тобой</p>
+        </div>
+        <nav class="footer__group">
+          <a href="#" class="footer__link">Поддержка</a>
+          <a href="#" class="footer__link">Правила сервиса</a>
+        </nav>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
